@@ -1,16 +1,25 @@
-pipeline{
-agent {
-label "master"
-}
-stages{
-stage("running ls"){
-steps {
-sh (script:'ls -l')
- sh (script:'uname -a')
- sh (script:'date')
-}
-}
-}
-
-
+pipeline {
+    
+    agent {
+        label "master"
+        
+    }
+    
+    stages {
+        
+        stage("Hello world"){
+            steps {
+                sh  "ls -l"
+            }
+        }
+        stage("print Build No"){
+            steps {
+                sh "touch /tmp/test_${BUILD_NUMBER}"
+            }
+        }
+            
+        
+        
+    }
+    
 }
