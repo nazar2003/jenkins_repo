@@ -1,4 +1,4 @@
-pipelineJob(My_test_Job){
+pipelineJob("My_test_Job"){
 
 definition {
 
@@ -8,7 +8,7 @@ scm {
 git {
 remote {
 
-url (https://github.com/nazar2003/jenkins_repo.git)
+url ("https://github.com/nazar2003/jenkins_repo.git")
 }
 
 }
